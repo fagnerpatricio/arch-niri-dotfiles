@@ -1,0 +1,15 @@
+# Backups
+*.bak
+*.backup
+*~
+
+# Editor
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

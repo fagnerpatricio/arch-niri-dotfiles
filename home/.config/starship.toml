@@ -1,0 +1,75 @@
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$rust\
+$python\
+$nodejs\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+# ============================================================
+# DIRETÓRIO
+# ============================================================
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+home_symbol = "/home/fagner"
+read_only = " 󰌾"
+style = "bold cyan"
+format = "[󰉋  $path]($style)[$read_only]($read_only_style) "
+
+[directory.substitutions]
+"Documentos" = "󰈙 Documentos"
+"Downloads" = "󰇚 Downloads"
+"Imagens" = "󰉏 Imagens"
+"Música" = "󰎈 Música"
+"Vídeos" = "󰕧 Vídeos"
+
+# ============================================================
+# GIT
+# ============================================================
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+
+# ============================================================
+# LINGUAGENS
+# ============================================================
+
+[rust]
+symbol = "rs "
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = "py "
+format = "[$symbol($version )]($style)"
+
+[nodejs]
+symbol = "node "
+format = "[$symbol($version )]($style)"
+
+# ============================================================
+# TEMPO DO COMANDO
+# ============================================================
+
+[cmd_duration]
+min_time = 1000
+format = "[$duration]($style) "
+
+# ============================================================
+# PROMPT
+# ============================================================
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
